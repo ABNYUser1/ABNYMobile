@@ -6,6 +6,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
+using ABNYMobile.Models;
 
 namespace ABNYMobile
 {
@@ -17,6 +18,12 @@ namespace ABNYMobile
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
             filters.Add(new HandleErrorAttribute());
+        }
+
+        public void Session_Start(object sender, EventArgs args)
+        {
+            var repo = new MockRepository();
+            Session["repo"] = repo;
         }
 
         public static void RegisterRoutes(RouteCollection routes)
@@ -40,6 +47,8 @@ namespace ABNYMobile
 
             RegisterGlobalFilters(GlobalFilters.Filters);
             RegisterRoutes(RouteTable.Routes);
+
+            
         }
     }
 }

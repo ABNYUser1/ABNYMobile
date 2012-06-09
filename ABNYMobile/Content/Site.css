@@ -73,3 +73,18 @@ textarea
 {
     display: none;
 }
+
+.cardcontainer
+{
+    width:  400px;    
+}
+
+.card
+{  
+    border: 1px solid black;
+    text-wrap: normal;
+    width: 160px;
+    float: left;  
+    padding: 5px;
+    margin: 2px; 
+}

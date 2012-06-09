@@ -21,5 +21,13 @@ namespace ABNYMobile.Models
         public int? MemberId { get; set; }
 
         public Member MemberWith { get; set; }
+
+        public string FullName
+        {
+            get
+            {
+                return string.Format("{0} {1}", this.FirstName, this.LastName);
+            }
+        }
     }
 }

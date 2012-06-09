@@ -24,5 +24,10 @@ namespace ABNYMobile.Models
         public double OutstandingBalance { get; set; }
 
         public DateTime MemberSince { get; set; }
+
+        public override string ToString()
+        {
+            return this.CompanyName;
+        }
     }
 }
