@@ -1,0 +1,107 @@
+﻿@model ABNYMobile.Models.Member
+
+@{
+    ViewBag.Title = "ABNY Mobile - Members > Edit";
+}
+
+<h2>Edit</h2>
+
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <legend>Member</legend>
+
+        @Html.HiddenFor(model => model.Id)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CompanyName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CompanyName)
+            @Html.ValidationMessageFor(model => model.CompanyName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.IsIndividual)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.IsIndividual)
+            @Html.ValidationMessageFor(model => model.IsIndividual)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.IsGovernmentAgency)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.IsGovernmentAgency)
+            @Html.ValidationMessageFor(model => model.IsGovernmentAgency)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.PrimaryContact)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.PrimaryContact)
+            @Html.ValidationMessageFor(model => model.PrimaryContact)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.PrimaryPhone)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.PrimaryPhone)
+            @Html.ValidationMessageFor(model => model.PrimaryPhone)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Tags)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Tags)
+            @Html.ValidationMessageFor(model => model.Tags)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.AnnualDuesAmount)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.AnnualDuesAmount)
+            @Html.ValidationMessageFor(model => model.AnnualDuesAmount)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.LastPaid)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.LastPaid)
+            @Html.ValidationMessageFor(model => model.LastPaid)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.OutstandingBalance)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.OutstandingBalance)
+            @Html.ValidationMessageFor(model => model.OutstandingBalance)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.MemberSince)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.MemberSince)
+            @Html.ValidationMessageFor(model => model.MemberSince)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

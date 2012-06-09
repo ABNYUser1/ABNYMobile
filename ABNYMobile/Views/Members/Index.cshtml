@@ -1,0 +1,23 @@
+﻿@{
+    ViewBag.Title = "ABNY Mobile - Members";
+}
+
+<h2>@Html.ActionLink("ABNY Mobile", "Index", "Home") - Members</h2>
+
+<div class="cardcontainer">
+    @foreach (var m in Model)
+    {
+        <div class="card">
+            @Html.ActionLink((string)m.CompanyName, "Edit", new { id = m.Id })
+            <div>
+                <span>
+                        @m.PrimaryContact
+                </span>
+                <div>
+                    <span >@(((DateTime)m.MemberSince).ToString("MM/dd/yyyy"))</span>
+                </div>
+            </div>
+        </div>
+    }
+
+</div>

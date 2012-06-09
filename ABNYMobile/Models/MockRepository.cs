@@ -116,7 +116,7 @@ namespace ABNYMobile.Models
             _mock_membersList.Add(_quickAdd("Company 1", "Glenn Ferrie", true, false));
             _mock_membersList.Add(_quickAdd("Something Digital", "Greg Steinberg", true, false));
             _mock_membersList.Add(_quickAdd("ABNY", "ABNY User1", true, false));
-            _mock_membersList.Add(_quickAdd("", "Mike Bloomberg", false, false));
+            _mock_membersList.Add(_quickAdd("City of New York", "Mike Bloomberg", false, false));
             _mock_membersList.Add(_quickAdd("US Federal Gov't", "Barak Obama", true, true));
         }
         #endregion
