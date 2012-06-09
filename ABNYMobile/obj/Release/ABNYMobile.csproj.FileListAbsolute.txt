@@ -1,0 +1,17 @@
+C:\Users\Glenn\Desktop\ABNYMobile\ABNYMobile\bin\ABNYMobile.dll
+C:\Users\Glenn\Desktop\ABNYMobile\ABNYMobile\bin\ABNYMobile.pdb
+C:\Users\Glenn\Desktop\ABNYMobile\ABNYMobile\bin\EntityFramework.dll
+C:\Users\Glenn\Desktop\ABNYMobile\ABNYMobile\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Glenn\Desktop\ABNYMobile\ABNYMobile\bin\NuGet.Core.dll
+C:\Users\Glenn\Desktop\ABNYMobile\ABNYMobile\bin\System.Web.Helpers.dll
+C:\Users\Glenn\Desktop\ABNYMobile\ABNYMobile\bin\System.Web.Mvc.dll
+C:\Users\Glenn\Desktop\ABNYMobile\ABNYMobile\bin\System.Web.Providers.dll
+C:\Users\Glenn\Desktop\ABNYMobile\ABNYMobile\bin\System.Web.Razor.dll
+C:\Users\Glenn\Desktop\ABNYMobile\ABNYMobile\bin\System.Web.WebPages.Administration.dll
+C:\Users\Glenn\Desktop\ABNYMobile\ABNYMobile\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Glenn\Desktop\ABNYMobile\ABNYMobile\bin\System.Web.WebPages.dll
+C:\Users\Glenn\Desktop\ABNYMobile\ABNYMobile\bin\System.Web.WebPages.Razor.dll
+C:\Users\Glenn\Desktop\ABNYMobile\ABNYMobile\bin\EntityFramework.xml
+C:\Users\Glenn\Desktop\ABNYMobile\ABNYMobile\obj\Release\ABNYMobile.csprojResolveAssemblyReference.cache
+C:\Users\Glenn\Desktop\ABNYMobile\ABNYMobile\obj\Release\ABNYMobile.dll
+C:\Users\Glenn\Desktop\ABNYMobile\ABNYMobile\obj\Release\ABNYMobile.pdb
