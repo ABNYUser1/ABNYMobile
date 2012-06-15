@@ -26,6 +26,7 @@
 	{
 		<div class="card">
 			@Html.ActionLink((string)m.Title, "Edit", new { id = m.Id })
+			@Html.ActionLink("Check off attendees", "Checkoff", new { id = m.Id })
 			<div>
 				<span>
 						@m.Description
@@ -36,5 +37,4 @@
 			</div>
 		</div>
 	}
-
 </div>

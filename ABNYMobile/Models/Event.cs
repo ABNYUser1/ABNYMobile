@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using System.Collections.Generic;
 
 namespace ABNYMobile.Models
 {
@@ -16,5 +17,7 @@ namespace ABNYMobile.Models
         public DateTime EventDate { get; set; }
 
         public int? MaxCapacity { get; set; }
+
+        public List<Attendee> Attendees { get; set; }
     }
 }

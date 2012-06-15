@@ -35,14 +35,14 @@ namespace ABNYMobile.Models
         {
             var last_id = 1;
             #region Quick Add Function
-            Func<string, string, DateTime, int?, Event> _quickAdd = (title, desc, dt, capacity) =>
+            Func<string, string, DateTime, int?, List<Attendee>, Event> _quickAdd = (title, desc, dt, capacity, attendees) =>
             {
-                var e = new Event { Id = (last_id++), Title = title, Description = desc, EventDate = dt, MaxCapacity = capacity };
+                var e = new Event { Id = (last_id++), Title = title, Description = desc, EventDate = dt, MaxCapacity = capacity, Attendees = attendees };
                 return e;
             };
             #endregion
 
-            _mock_eventsList.Add(_quickAdd("Event 1", "This is a sample Event", new DateTime(2012, 12, 16), 100));
+            _mock_eventsList.Add(_quickAdd("Event 1", "This is a sample Event", new DateTime(2012, 12, 16), 100, _mock_attendeesList));
         }
 
         private void AddMockPeople()

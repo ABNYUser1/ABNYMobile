@@ -27,6 +27,13 @@ namespace ABNYMobile.Areas.m.Controllers
             return View(item);
         }
 
+        public ActionResult Checkoff(int id)
+        {
+            var repo = this.GetRepoFromSession();
+            var item = repo.GetEvents().Single(q => q.Id == id);
+            return View(item);
+        }
+
         [HttpPost]
         public ActionResult Edit(FormCollection collection)
         {
@@ -35,5 +42,12 @@ namespace ABNYMobile.Areas.m.Controllers
             return RedirectToAction("Index");
         }
 
+        [HttpPost]
+        public ActionResult Checkoff(FormCollection collection)
+        {
+            var repo = this.GetRepoFromSession();
+            // TODO: Save Data
+            return RedirectToAction("Index");
+        }
     }
 }
