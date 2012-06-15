@@ -1,0 +1,40 @@
+﻿@{
+	ViewBag.Title = "ABNY Mobile - Events";
+}
+
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
+	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+
+<script type="text/javascript">
+	var ABNY =
+		{
+			version: 1.00,
+			getVersion: function () { return this.version; },
+			mobile:
+			{
+				goHome: function () { location.href = '@Url.Action("Index", "MHome", new {area = "m"}) '; }
+			}
+		};
+</script>
+
+
+<li> <button onclick="javascript:ABNY.mobile.goHome();">Home</button> </li>
+
+<div class="cardcontainer">
+	@foreach (var m in Model)
+	{
+		<div class="card">
+			@Html.ActionLink((string)m.Title, "Edit", new { id = m.Id })
+			<div>
+				<span>
+						@m.Description
+				</span>
+				<div>
+					<span >@(((DateTime)m.EventDate).ToString("MM/dd/yyyy"))</span>
+				</div>
+			</div>
+		</div>
+	}
+
+</div>

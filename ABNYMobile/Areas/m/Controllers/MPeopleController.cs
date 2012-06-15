@@ -1,18 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using ABNYMobile.Models;
 using ABNYMobile.Controllers;
 
-namespace ABNYMobile.Controllers
+namespace ABNYMobile.Areas.m.Controllers
 {
-    public class PeopleController : Controller
+    public class MPeopleController : Controller
     {
         //
-        // GET: /People/
+        // GET: /m/MPeople/
 
         public ActionResult Index()
         {
