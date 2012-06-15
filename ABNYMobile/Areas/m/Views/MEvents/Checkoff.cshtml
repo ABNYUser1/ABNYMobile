@@ -16,7 +16,8 @@
     <div class="display-label">Title</div>
     @foreach(var attendee in this.Model.Attendees) {
     <div class="display-field">
-        @Html.CheckBox("ATTENDEE" + attendee.PersonId.ToString());
+        @Html.CheckBox("ATTENDEE" + attendee.PersonId.ToString())
+        Attendee @attendee.PersonId
     </div>
     }
     
