@@ -18,5 +18,7 @@ namespace ABNYMobile.Models
         public int EventId { get; set; }
 
         public Event AssociatedEvent { get; set; }
+
+        public bool IsHere { get; set; }
     }
 }

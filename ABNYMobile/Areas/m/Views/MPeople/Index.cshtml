@@ -13,26 +13,24 @@
 			getVersion: function () { return this.version; },
 			mobile:
 			{
-				goHome: function () { location.href = '@Url.Action("Index", "MHome", new {area = "m"}) '; }
+			    goHome: function () { location.href = '@Url.Action("Index", "MHome", new {area = "m"}) '; },
+				editPerson: function (x) { location.href = '/m/MPeople/Edit/' + x }
 			}
 		};
 </script>
 
 <big><big><big><big><big><big><big><big>
 <li> <button onclick="javascript:ABNY.mobile.goHome();">Home</button> </li>
-</big></big></big></big></big></big></big></big>
 <div class="cardcontainer">
 	@foreach (var p in Model)
 	{
 		<div class="card">
-			@Html.ActionLink((string)p.FullName, "Edit", new { id = p.Id })
-			<div>
-				<span>
-						@p.MemberWith
-				</span>
-				<span >@p.EmailAddress</span>
-			</div>
+            <li>@p.FullName</li>
+            <li>@p.MemberWith</li>
+            <li>@p.EmailAddress</li>
+            <button onclick="javascript:ABNY.mobile.editPerson(@p.Id);">Edit</button>
 		</div>
 	}
-
 </div>
+
+</big></big></big></big></big></big></big></big>

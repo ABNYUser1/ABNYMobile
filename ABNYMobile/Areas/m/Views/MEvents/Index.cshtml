@@ -13,7 +13,9 @@
 			getVersion: function () { return this.version; },
 			mobile:
 			{
-				goHome: function () { location.href = '@Url.Action("Index", "MHome", new {area = "m"}) '; }
+			    goHome: function () { location.href = '@Url.Action("Index", "MHome", new {area = "m"}) '; },
+			    editEvent: function (x) { location.href = '/m/MEvents/Edit/' + x },
+			    checkoff: function (x) { location.href = '/m/MEvents/Checkoff/' + x }
 			}
 		};
 </script>
@@ -24,17 +26,12 @@
 <div class="cardcontainer">
 	@foreach (var m in Model)
 	{
-		<div class="card">
-			@Html.ActionLink((string)m.Title, "Edit", new { id = m.Id })
-			@Html.ActionLink("Check off attendees", "Checkoff", new { id = m.Id })
-			<div>
-				<span>
-						@m.Description
-				</span>
-				<div>
-					<span >@(((DateTime)m.EventDate).ToString("MM/dd/yyyy"))</span>
-				</div>
-			</div>
+        <div class="card">
+            <li>@m.Title</li>
+            <button onclick="javascript:ABNY.mobile.checkoff(@m.Id);">Check off attendees</button>
+			<li>@m.Description</li>
+            <li>@(((DateTime)m.EventDate).ToString("MM/dd/yyyy"))</li>
+            <button onclick="javascript:ABNY.mobile.editEvent(@m.Id);">Edit</button>
 		</div>
-	}
+    }
 </div>

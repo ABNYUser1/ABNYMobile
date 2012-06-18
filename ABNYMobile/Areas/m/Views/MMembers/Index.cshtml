@@ -13,7 +13,8 @@
 			getVersion: function () { return this.version; },
 			mobile:
 			{
-				goHome: function () { location.href = '@Url.Action("Index", "MHome", new {area = "m"}) '; }
+			    goHome: function () { location.href = '@Url.Action("Index", "MHome", new {area = "m"}) '; },
+			    editMember: function (x) { location.href = '/m/MMembers/Edit/' + x }
 			}
 		};
 </script>
@@ -25,15 +26,10 @@
 	@foreach (var m in Model)
 	{
 		<div class="card">
-			@Html.ActionLink((string)m.CompanyName, "Edit", new { id = m.Id })
-			<div>
-				<span>
-						@m.PrimaryContact
-				</span>
-				<div>
-					<span >@(((DateTime)m.MemberSince).ToString("MM/dd/yyyy"))</span>
-				</div>
-			</div>
+			<li>@m.CompanyName</li>
+            <li>@m.PrimaryContact</li>
+            <li>@(((DateTime)m.MemberSince).ToString("MM/dd/yyyy"))</li>
+            <button onclick="javascript:ABNY.mobile.editMember(@m.Id);">Edit</button>
 		</div>
 	}
 

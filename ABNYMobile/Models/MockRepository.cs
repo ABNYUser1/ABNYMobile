@@ -27,7 +27,7 @@ namespace ABNYMobile.Models
             // Every one is going!
             var ev = _mock_eventsList.First();
             _mock_peopleList.ForEach(
-                p => _mock_attendeesList.Add(new Attendee { Id = (last_id++), EventId = ev.Id, AssociatedEvent = ev, PersonId = p.Id, AssociatedPerson = p })
+                p => _mock_attendeesList.Add(new Attendee { Id = (last_id++), EventId = ev.Id, AssociatedEvent = ev, PersonId = p.Id, AssociatedPerson = p, IsHere = false })
                 );
         }
 
@@ -160,6 +160,11 @@ namespace ABNYMobile.Models
             if (eventDate != null && eventDate.HasValue) set = set.Where(q => q.EventDate == eventDate.Value);
 
             return set;
+        }
+
+        public Event GetEvent(int Id)
+        {
+            return _mock_eventsList.First(q => q.Id == Id);
         }
 
         public IEnumerable<Attendee> GetEventAttendees(int eventId)
