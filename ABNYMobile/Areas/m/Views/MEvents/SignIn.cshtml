@@ -1,15 +1,15 @@
 ﻿@model ABNYMobile.Models.Event
 
 @{
-    ViewBag.Title = "Checkoff";
+    ViewBag.Title = "Signin";
 }
 
 <link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
 	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
 
-<big><big><big><big><big><big><big><big>
-<h2>Attendee Checkoff</h2>
+
+<h2>Attendee Signin</h2>
 @using (Html.BeginForm()) {
     @Html.ValidationSummary(true)
 
@@ -31,21 +31,21 @@
                         Attendee @attendee.Id
                         @if (attendee.IsHere)
                         { 
-                            <big><big>
+                            
 		                    <select name="@attendee.Id" id="flip-a" data-role="slider">
 			                    <option value="off" >Not Here</option>
 			                    <option value="on" selected="selected">Here</option>
 		                    </select> 
-                            </big></big>
+                            
                         }
                         else
                         {
-                            <big><big>
+                            
                             <select name="@attendee.Id" id="flip-a" data-role="slider">
 			                    <option value="off" selected="selected" >Not Here</option>
 			                    <option value="on">Here</option>
 		                    </select> 
-                            </big></big>
+                            
                         }
                     </li>
                  }
@@ -53,4 +53,3 @@
     </fieldset>
 }
 
-</big></big></big></big></big></big></big></big>

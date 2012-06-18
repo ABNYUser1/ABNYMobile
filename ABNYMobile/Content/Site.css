@@ -2,8 +2,22 @@ body
 {
     font-size: large;
     font-family: "Trebuchet MS", Verdana, Helvetica, Sans-Serif;
+    font-size: small;
     color: #232323;
     background-color: #fff;
+}
+
+@media screen and (max-width: 480px) {
+
+	html {
+		-webkit-text-size-adjust: none;
+	}
+
+	#main-nav a {
+		font-size: x-large;
+		padding: 10px 8px;
+	}
+
 }
 
 header,

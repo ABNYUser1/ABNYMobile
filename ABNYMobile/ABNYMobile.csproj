@@ -234,7 +234,7 @@
     <Content Include="Areas\m\Views\MPeople\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Areas\m\Views\MEvents\Checkoff.cshtml" />
+    <Content Include="Areas\m\Views\MEvents\SignIn.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
