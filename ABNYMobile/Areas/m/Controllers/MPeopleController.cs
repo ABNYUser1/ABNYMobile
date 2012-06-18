@@ -28,10 +28,22 @@ namespace ABNYMobile.Areas.m.Controllers
         }
 
         [HttpPost]
-        public ActionResult Edit(FormCollection collection)
+        public ActionResult Edit(int id, FormCollection collection)
         {
             var repo = this.GetRepoFromSession();
-            // TODO: Save Data
+            var person = repo.GetMember(id);
+
+            person.AnnualDuesAmount = Convert.ToDouble(collection["AnnualDuesAmount"]);
+            person.CompanyName = collection["CompanyName"];
+            person.IsGovernmentAgency = Convert.ToBoolean(collection["IsGovernmentAgency"].Replace("true,false", "true"));
+            person.IsIndividual = Convert.ToBoolean(collection["IsIndividual"].Replace("true,false", "true"));
+            //person.LastPaid = collection["LastPaid"];
+            //person.MemberSince = collection["MemberSince"];
+            person.OutstandingBalance = Convert.ToDouble(collection["OutstandingBalance"]);
+            person.PrimaryContact = collection["PrimaryContact"];
+            person.PrimaryPhone = collection["PrimaryPhone"];
+            person.Tags = collection["Tags"];
+
             return RedirectToAction("Index");
         }
     }

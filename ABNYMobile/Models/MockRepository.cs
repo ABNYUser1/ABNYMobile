@@ -167,6 +167,16 @@ namespace ABNYMobile.Models
             return _mock_eventsList.First(q => q.Id == Id);
         }
 
+        public Member GetMember(int Id)
+        {
+            return _mock_membersList.First(q => q.Id == Id);
+        }
+
+        public Person GetPerson(int Id)
+        {
+            return _mock_peopleList.First(q => q.Id == Id);
+        }
+
         public IEnumerable<Attendee> GetEventAttendees(int eventId)
         {
             IEnumerable<Attendee> set = _mock_attendeesList.Where(q => q.EventId == eventId);

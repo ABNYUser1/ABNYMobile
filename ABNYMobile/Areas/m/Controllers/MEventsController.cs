@@ -35,10 +35,16 @@ namespace ABNYMobile.Areas.m.Controllers
         }
 
         [HttpPost]
-        public ActionResult Edit(FormCollection collection)
+        public ActionResult Edit(int id, FormCollection collection)
         {
             var repo = this.GetRepoFromSession();
-            // TODO: Save Data
+            var e = repo.GetEvent(id);
+
+            e.Description = collection["Description"];
+            //e.EventDate = collection["EventDate"];
+            e.MaxCapacity = Convert.ToInt32(collection["MaxCapacity"]);
+            e.Title = collection["Title"];
+
             return RedirectToAction("Index");
         }
 
