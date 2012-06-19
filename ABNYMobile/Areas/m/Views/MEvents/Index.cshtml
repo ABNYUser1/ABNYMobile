@@ -3,6 +3,7 @@
 }
 
 <link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
+    <link rel="Stylesheet" href="/Content/Site.css" />
 	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
 
@@ -15,7 +16,7 @@
 			{
 			    goHome: function () { location.href = '@Url.Action("Index", "MHome", new {area = "m"}) '; },
 			    editEvent: function (x) { location.href = '/m/MEvents/Edit/' + x },
-			    checkoff: function (x) { location.href = '/m/MEvents/Checkoff/' + x }
+			    Signin: function (x) { location.href = '/m/MEvents/Signin/' + x }
 			}
 		};
 </script>
@@ -27,7 +28,7 @@
 	{
         <div class="card">
             <li>@m.Title</li>
-            <button onclick="javascript:ABNY.mobile.checkoff(@m.Id);">Check off attendees</button>
+            <button onclick="javascript:ABNY.mobile.Signin(@m.Id);">Attendee Signin</button>
 			<li>@m.Description</li>
             <li>@(((DateTime)m.EventDate).ToString("MM/dd/yyyy"))</li>
             <button onclick="javascript:ABNY.mobile.editEvent(@m.Id);">Edit</button>

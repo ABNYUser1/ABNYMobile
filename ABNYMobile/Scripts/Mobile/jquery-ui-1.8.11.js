@@ -9252,7 +9252,7 @@ $.extend(Datepicker.prototype, {
 		$.datepicker._updateDatepicker(inst);
 		// fix width for dynamic number of date pickers
 		// and adjust position before showing
-		offset = $.datepicker._checkOffset(inst, offset, isFixed);
+		offset = $.datepicker._Signinset(inst, offset, isFixed);
 		inst.dpDiv.css({position: ($.datepicker._inDialog && $.blockUI ?
 			'static' : (isFixed ? 'fixed' : 'absolute')), display: 'none',
 			left: offset.left + 'px', top: offset.top + 'px'});
@@ -9349,7 +9349,7 @@ $.extend(Datepicker.prototype, {
 	},
 
 	/* Check positioning to remain on screen. */
-	_checkOffset: function(inst, offset, isFixed) {
+	_Signinset: function(inst, offset, isFixed) {
 		var dpWidth = inst.dpDiv.outerWidth();
 		var dpHeight = inst.dpDiv.outerHeight();
 		var inputWidth = inst.input ? inst.input.outerWidth() : 0;

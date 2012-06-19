@@ -1,30 +1,24 @@
 body
 {
-    font-size: large;
+    font-size: xx-large;
     font-family: "Trebuchet MS", Verdana, Helvetica, Sans-Serif;
-    font-size: small;
     color: #232323;
     background-color: #fff;
 }
 
-@media screen and (max-width: 480px) {
-
-	html {
-		-webkit-text-size-adjust: none;
-	}
-
-	#main-nav a {
-		font-size: x-large;
-		padding: 10px 8px;
-	}
-
-}
 
 header,
 footer,
 nav,
 section {
     display: block;
+}
+
+@media all
+{
+    #body {
+		font-size: small;
+	}
 }
 
 /* Styles for basic forms
@@ -61,6 +55,7 @@ textarea
 
 /* Styles for validation helpers
 -----------------------------------------------------------*/
+
 .field-validation-error
 {
     color: #ff0000;
@@ -97,7 +92,7 @@ textarea
 {  
     border: 1px solid black;
     text-wrap: normal;
-    width: 160px;
+    width: 350px;
     float: left;  
     padding: 5px;
     margin: 2px; 

@@ -27,7 +27,7 @@ namespace ABNYMobile.Areas.m.Controllers
             return View(item);
         }
 
-        public ActionResult Checkoff(int id)
+        public ActionResult Signin(int id)
         {
             var repo = this.GetRepoFromSession();
             var item = repo.GetEvents().Single(q => q.Id == id);
@@ -49,7 +49,7 @@ namespace ABNYMobile.Areas.m.Controllers
         }
 
         [HttpPost]
-        public ActionResult Checkoff(int id, FormCollection collection)
+        public ActionResult Signin(int id, FormCollection collection)
         {
             var repo = this.GetRepoFromSession();
             foreach (var key in collection.AllKeys)
